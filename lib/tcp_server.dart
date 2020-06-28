@@ -10,7 +10,7 @@ class TcpServer {
 
   TcpServer(){
     ipAddress = "0.0.0.0";
-    port = 6101;
+    port = 9742;
 
     addSocket();
   }
