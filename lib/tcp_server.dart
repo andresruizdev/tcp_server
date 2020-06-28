@@ -1,5 +1,6 @@
 
 import 'dart:async';
+import 'dart:convert';
 import 'dart:io';
 
 class TcpServer {
@@ -28,7 +29,7 @@ class TcpServer {
           socket.listen((List<int> data) {
             String result = new String.fromCharCodes(data);
             print(result.toString());
-            socket.add([0x48, 0x54]);
+            socket.add(ascii.encode("Latitud:X,Longitud:Y,Velicidad:V-K/s"));
           });
         });
       });
