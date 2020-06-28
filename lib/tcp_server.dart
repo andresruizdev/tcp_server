@@ -23,6 +23,7 @@ class TcpServer {
     try{
       Future<ServerSocket> serverFuture = ServerSocket.bind(ipAddress, port);
       serverFuture.then((ServerSocket server) {
+        print("Server Stablished");
         server.listen((Socket socket) {
           socket.listen((List<int> data) {
             String result = new String.fromCharCodes(data);
